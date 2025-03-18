@@ -1,0 +1,264 @@
+/* src/styles/global.css */
+
+/* CSS Reset - Meyer Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Global Style Variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+
+  --font-family: 'Arial', sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --text-color: #333;
+
+  --spacing-unit: 16px;
+
+  --border-radius: 5px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Typographic Base */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-color);
+}
+
+/* Basic Grid System */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-unit);
+}
+
+/* Responsive Column Classes */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: calc(var(--spacing-unit) / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: calc(var(--spacing-unit) / 4);
+  }
+}
+
+/* Default HTML Element Styles */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: var(--spacing-unit);
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: var(--spacing-unit);
+}
+
+h3 {
+  font-size: 1.75em;
+  margin-bottom: var(--spacing-unit);
+}
+
+h4 {
+  font-size: 1.5em;
+  margin-bottom: var(--spacing-unit);
+}
+
+h5 {
+  font-size: 1.25em;
+  margin-bottom: var(--spacing-unit);
+}
+
+h6 {
+  font-size: 1em;
+  margin-bottom: var(--spacing-unit);
+}
+
+p {
+  margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+ul,
+ol {
+  margin-bottom: var(--spacing-unit);
+  padding-left: var(--spacing-unit);
+}
+
+li {
+  margin-bottom: calc(var(--spacing-unit) / 4);
+}
+
+form {
+  margin-bottom: var(--spacing-unit);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: calc(var(--spacing-unit) / 2);
+  margin-bottom: calc(var(--spacing-unit) / 2);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+
+button:hover,
+button:focus {
+  background-color: #0056b3;
+}
+
+/* Utility Classes */
+.margin-top-small {
+  margin-top: calc(var(--spacing-unit) / 4);
+}
+
+.margin-top-medium {
+  margin-top: calc(var(--spacing-unit) / 2);
+}
+
+.margin-top-large {
+  margin-top: var(--spacing-unit);
+}
+
+.margin-bottom-small {
+  margin-bottom: calc(var(--spacing-unit) / 4);
+}
+
+.margin-bottom-medium {
+  margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+.margin-bottom-large {
+  margin-bottom: var(--spacing-unit);
+}
+
+.padding-left-small {
+  padding-left: calc(var(--spacing-unit) / 4);
+}
+
+.padding-left-medium {
+  padding-left: calc(var(--spacing-unit) / 2);
+}
+
+.padding-left-large {
+  padding-left: var(--spacing-unit);
+}
+
+.padding-right-small {
+  padding-right: calc(var(--spacing-unit) / 4);
+}
+
+.padding-right-medium {
+  padding-right: calc(var(--spacing-unit) / 2);
+}
+
+.padding-right-large {
+  padding-right: var(--spacing-unit);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* Accessibility Styles */
+button:focus,
+a:focus,
+input:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
