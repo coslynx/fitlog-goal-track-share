@@ -1,0 +1,22 @@
+{
+  "startFrontend": {
+    "description": "Start React Frontend",
+    "command": "npm start --prefix client"
+  },
+  "startBackend": {
+    "description": "Start Node.js Backend",
+    "command": "node server/server.js"
+  },
+  "installDependencies": {
+    "description": "Install Dependencies",
+    "command": "npm install"
+  },
+  "installClientDependencies": {
+    "description": "Install Client Dependencies",
+    "command": "npm install --prefix client"
+  },
+  "runTests": {
+    "description": "Run Tests",
+    "command": "npm test"
+  }
+}
